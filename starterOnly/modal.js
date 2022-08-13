@@ -1,5 +1,5 @@
 function editNav() {
-  let x = document.getElementById("myTopnav");
+  var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {
@@ -12,7 +12,6 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 
-
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
@@ -21,12 +20,9 @@ function launchModal() {
   modalbg.style.display = "block";
 }
 
+function validate(){
+  document.getElementById("formInscription").style.display = "none";
+  document.getElementById("succesInscription").style.display = "block";
 
-//modification div modal form
-const validate = document.querySelector(".btnsubmit");
-validate.addEventListener(,validateform);
-function validateform(){
-  console.log("coucou");
+  return false;
 }
-
-
